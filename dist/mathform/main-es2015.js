@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"mathForm\">\n    <div class=\"equation\">{{ a }} + {{ b }} =</div>\n    <input appAnswer formControlName=\"answer\" />\n  </form>\n  \n  <div class=\"stats\">\n    {{ secondsPerSolution | number: '1.1-3' }}\n  </div>\n  ");
+/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"mathForm\">\n    <div class=\"equation\">{{ firstNumber }} + {{ secondNumber }} =</div>\n    <input appAnswer formControlName=\"answer\" />\n  </form>\n  \n  <div class=\"stats\">\n    {{ secondsPerSolution | number: '1.1-3' }}\n  </div>\n  ");
 
 /***/ }),
 
@@ -49,19 +49,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/equation/equation.component.html":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/equation/equation.component.html ***!
-  \****************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<form [formGroup]=\"mathForm\">\n  <div class=\"equation\">{{ a }} + {{ b }} =</div>\n  <input appAnswerHighlight formControlName=\"answer\" />\n</form>\n\n<div class=\"stats\">\n  {{ secondsPerSolution | number: '1.1-3' }}\n</div>\n");
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/shared/nav-menu/nav-menu.component.html":
 /*!***********************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/shared/nav-menu/nav-menu.component.html ***!
@@ -71,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<header>\n    <nav\n      class=\"navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3\"\n    >\n      <div class=\"container\">\n        <a class=\"navbar-brand\" [routerLink]=\"['/']\">LayoutAsyncLoading</a>\n        <button\n          class=\"navbar-toggler\"\n          type=\"button\"\n          data-toggle=\"collapse\"\n          data-target=\".navbar-collapse\"\n          aria-label=\"Toggle navigation\"\n          [attr.aria-expanded]=\"isExpanded\"\n          (click)=\"toggle()\"\n        >\n          <span class=\"navbar-toggler-icon\"></span>\n        </button>\n        <div\n          class=\"navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse\"\n          [ngClass]=\"{ show: isExpanded }\"\n        >\n          <ul class=\"navbar-nav flex-grow\">\n            <li class=\"nav-item\">\n              <a\n                class=\"nav-link text-dark\"\n                [routerLink]=\"['/addition/']\"\n                [routerLinkActive]=\"['link-active']\"\n                routerLinkActiveOptions=\"{ exact: true }\"\n                >'+'' Addition</a\n              >\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link text-dark\" [routerLink]=\"['/substraction']\" [routerLinkActive]=\"['link-active']\"\n                >'-'' Substraction</a\n              >\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link text-dark\" [routerLink]=\"['/multiplication']\" [routerLinkActive]=\"['link-active']\"\n                >'*'' Multiplication</a\n              >\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link text-dark\" [routerLink]=\"['/division']\" [routerLinkActive]=\"['link-active']\"\n                >'/'' Division</a\n              >\n            </li>\n          </ul>\n        </div>\n      </div>\n    </nav>\n  </header>");
+/* harmony default export */ __webpack_exports__["default"] = ("<header>\n    <nav\n      class=\"navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3\"\n    >\n      <div class=\"container\">\n        <a class=\"navbar-brand\" [routerLink]=\"['/']\">Math Game</a>\n        <button\n          class=\"navbar-toggler\"\n          type=\"button\"\n          data-toggle=\"collapse\"\n          data-target=\".navbar-collapse\"\n          aria-label=\"Toggle navigation\"\n          [attr.aria-expanded]=\"isExpanded\"\n          (click)=\"toggle()\"\n        >\n          <span class=\"navbar-toggler-icon\"></span>\n        </button>\n        <div\n          class=\"navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse\"\n          [ngClass]=\"{ show: isExpanded }\"\n        >\n          <ul class=\"navbar-nav flex-grow\">\n            <li class=\"nav-item\">\n              <a\n                class=\"nav-link text-dark\"\n                [routerLink]=\"['/addition/']\"\n                [routerLinkActive]=\"['link-active']\"\n                routerLinkActiveOptions=\"{ exact: true }\"\n                >+Addition</a\n              >\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link text-dark\" [routerLink]=\"['/substraction']\" [routerLinkActive]=\"['link-active']\"\n                >-Substraction</a\n              >\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link text-dark\" [routerLink]=\"['/multiplication']\" [routerLinkActive]=\"['link-active']\"\n                >*Multiplication</a\n              >\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link text-dark\" [routerLink]=\"['/division']\" [routerLinkActive]=\"['link-active']\"\n                >/Division</a\n              >\n            </li>\n          </ul>\n        </div>\n      </div>\n    </nav>\n  </header>");
 
 /***/ }),
 
@@ -313,7 +300,7 @@ function __importDefault(mod) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkZGl0aW9uL2FkZGl0aW9uLWxlYXJuL2FkZGl0aW9uLWxlYXJuLmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("form {\r\n    margin-top: 20%;\r\n    display: flex;\r\n    justify-content: center;\r\n    font-size: 96px;\r\n  }\r\n  \r\n  input {\r\n    font-size: 96px;\r\n    border: none;\r\n    border-bottom: 1px solid black;\r\n    width: 20%;\r\n    text-align: center;\r\n  }\r\n  \r\n  input:focus {\r\n    outline: none;\r\n  }\r\n  \r\n  .stats {\r\n    position: absolute;\r\n    bottom: 100px;\r\n    left: 0;\r\n    right: 0;\r\n    text-align: center;\r\n    font-size: 24px;\r\n  }\r\n  \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRkaXRpb24vYWRkaXRpb24tbGVhcm4vYWRkaXRpb24tbGVhcm4uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGVBQWU7SUFDZixhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLGVBQWU7RUFDakI7O0VBRUE7SUFDRSxlQUFlO0lBQ2YsWUFBWTtJQUNaLDhCQUE4QjtJQUM5QixVQUFVO0lBQ1Ysa0JBQWtCO0VBQ3BCOztFQUVBO0lBQ0UsYUFBYTtFQUNmOztFQUVBO0lBQ0Usa0JBQWtCO0lBQ2xCLGFBQWE7SUFDYixPQUFPO0lBQ1AsUUFBUTtJQUNSLGtCQUFrQjtJQUNsQixlQUFlO0VBQ2pCIiwiZmlsZSI6InNyYy9hcHAvYWRkaXRpb24vYWRkaXRpb24tbGVhcm4vYWRkaXRpb24tbGVhcm4uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImZvcm0ge1xyXG4gICAgbWFyZ2luLXRvcDogMjAlO1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgZm9udC1zaXplOiA5NnB4O1xyXG4gIH1cclxuICBcclxuICBpbnB1dCB7XHJcbiAgICBmb250LXNpemU6IDk2cHg7XHJcbiAgICBib3JkZXI6IG5vbmU7XHJcbiAgICBib3JkZXItYm90dG9tOiAxcHggc29saWQgYmxhY2s7XHJcbiAgICB3aWR0aDogMjAlO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIH1cclxuICBcclxuICBpbnB1dDpmb2N1cyB7XHJcbiAgICBvdXRsaW5lOiBub25lO1xyXG4gIH1cclxuICBcclxuICAuc3RhdHMge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgYm90dG9tOiAxMDBweDtcclxuICAgIGxlZnQ6IDA7XHJcbiAgICByaWdodDogMDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGZvbnQtc2l6ZTogMjRweDtcclxuICB9XHJcbiAgIl19 */");
 
 /***/ }),
 
@@ -341,16 +328,16 @@ let AdditionLearnComponent = class AdditionLearnComponent {
     constructor() {
         this.secondsPerSolution = 0;
         this.mathForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
-            a: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.randomNumber()),
-            b: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.randomNumber()),
+            firstNumber: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.randomNumber()),
+            secondNumber: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.randomNumber()),
             answer: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('')
-        }, [_math_addition_validator__WEBPACK_IMPORTED_MODULE_4__["MathAdditionValidator"].validate('answer', 'a', 'b')]);
+        }, [_math_addition_validator__WEBPACK_IMPORTED_MODULE_4__["MathAdditionValidator"].validate('answer', 'firstNumber', 'secondNumber')]);
     }
     get firstNumber() {
-        return this.mathForm.value.a;
+        return this.mathForm.value.firstNumber;
     }
     get secondNumber() {
-        return this.mathForm.value.b;
+        return this.mathForm.value.secondNumber;
     }
     ngOnInit() {
         this.mathForm.statusChanges
@@ -364,8 +351,8 @@ let AdditionLearnComponent = class AdditionLearnComponent {
             this.secondsPerSolution =
                 (new Date().getTime() - startTime.getTime()) / numberSolved / 1000;
             this.mathForm.setValue({
-                a: this.randomNumber(),
-                b: this.randomNumber(),
+                firstNumber: this.randomNumber(),
+                secondNumber: this.randomNumber(),
                 answer: ''
             });
         });
@@ -489,51 +476,6 @@ class MathAdditionValidator {
 
 /***/ }),
 
-/***/ "./src/app/answer-highlight.directive.ts":
-/*!***********************************************!*\
-  !*** ./src/app/answer-highlight.directive.ts ***!
-  \***********************************************/
-/*! exports provided: AnswerHighlightDirective */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AnswerHighlightDirective", function() { return AnswerHighlightDirective; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-
-
-
-
-let AnswerHighlightDirective = class AnswerHighlightDirective {
-    constructor(el, controlName) {
-        this.el = el;
-        this.controlName = controlName;
-    }
-    ngOnInit() {
-        this.controlName.control.parent.valueChanges
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(({ a, b, answer }) => Math.abs((a + b - answer) / (a + b))))
-            .subscribe(value => {
-            console.log(value);
-        });
-    }
-};
-AnswerHighlightDirective.ctorParameters = () => [
-    { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"] },
-    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControl"] }
-];
-AnswerHighlightDirective = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
-        selector: '[appAnswerHighlight]'
-    })
-], AnswerHighlightDirective);
-
-
-
-/***/ }),
-
 /***/ "./src/app/app-routing.module.ts":
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
@@ -645,14 +587,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _equation_equation_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./equation/equation.component */ "./src/app/equation/equation.component.ts");
-/* harmony import */ var _answer_highlight_directive__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./answer-highlight.directive */ "./src/app/answer-highlight.directive.ts");
-/* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./shared/shared.module */ "./src/app/shared/shared.module.ts");
-/* harmony import */ var _addition_addition_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./addition/addition.module */ "./src/app/addition/addition.module.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-
-
+/* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/shared.module */ "./src/app/shared/shared.module.ts");
+/* harmony import */ var _addition_addition_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./addition/addition.module */ "./src/app/addition/addition.module.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 
 
 
@@ -666,124 +604,13 @@ let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _equation_equation_component__WEBPACK_IMPORTED_MODULE_5__["EquationComponent"], _answer_highlight_directive__WEBPACK_IMPORTED_MODULE_6__["AnswerHighlightDirective"]],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _shared_shared_module__WEBPACK_IMPORTED_MODULE_7__["SharedModule"], _addition_addition_module__WEBPACK_IMPORTED_MODULE_8__["AdditionModule"], _angular_router__WEBPACK_IMPORTED_MODULE_9__["RouterModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_10__["AppRoutingModule"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]],
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _shared_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"], _addition_addition_module__WEBPACK_IMPORTED_MODULE_6__["AdditionModule"], _angular_router__WEBPACK_IMPORTED_MODULE_7__["RouterModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"]],
         providers: [],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
     })
 ], AppModule);
 
-
-
-/***/ }),
-
-/***/ "./src/app/equation/equation.component.css":
-/*!*************************************************!*\
-  !*** ./src/app/equation/equation.component.css ***!
-  \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("form {\n  margin-top: 20%;\n  display: flex;\n  justify-content: center;\n  font-size: 96px;\n}\n\ninput {\n  font-size: 96px;\n  border: none;\n  border-bottom: 1px solid black;\n  width: 20%;\n  text-align: center;\n}\n\ninput:focus {\n  outline: none;\n}\n\n.stats {\n  position: absolute;\n  bottom: 100px;\n  left: 0;\n  right: 0;\n  text-align: center;\n  font-size: 24px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZXF1YXRpb24vZXF1YXRpb24uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGVBQWU7RUFDZixhQUFhO0VBQ2IsdUJBQXVCO0VBQ3ZCLGVBQWU7QUFDakI7O0FBRUE7RUFDRSxlQUFlO0VBQ2YsWUFBWTtFQUNaLDhCQUE4QjtFQUM5QixVQUFVO0VBQ1Ysa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsYUFBYTtBQUNmOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLGFBQWE7RUFDYixPQUFPO0VBQ1AsUUFBUTtFQUNSLGtCQUFrQjtFQUNsQixlQUFlO0FBQ2pCIiwiZmlsZSI6InNyYy9hcHAvZXF1YXRpb24vZXF1YXRpb24uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImZvcm0ge1xuICBtYXJnaW4tdG9wOiAyMCU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBmb250LXNpemU6IDk2cHg7XG59XG5cbmlucHV0IHtcbiAgZm9udC1zaXplOiA5NnB4O1xuICBib3JkZXI6IG5vbmU7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCBibGFjaztcbiAgd2lkdGg6IDIwJTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG5pbnB1dDpmb2N1cyB7XG4gIG91dGxpbmU6IG5vbmU7XG59XG5cbi5zdGF0cyB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgYm90dG9tOiAxMDBweDtcbiAgbGVmdDogMDtcbiAgcmlnaHQ6IDA7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgZm9udC1zaXplOiAyNHB4O1xufVxuIl19 */");
-
-/***/ }),
-
-/***/ "./src/app/equation/equation.component.ts":
-/*!************************************************!*\
-  !*** ./src/app/equation/equation.component.ts ***!
-  \************************************************/
-/*! exports provided: EquationComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EquationComponent", function() { return EquationComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _math_validators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../math-validators */ "./src/app/math-validators.ts");
-
-
-
-
-
-let EquationComponent = class EquationComponent {
-    constructor() {
-        this.secondsPerSolution = 0;
-        this.mathForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
-            a: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.randomNumber()),
-            b: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.randomNumber()),
-            answer: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('')
-        }, [_math_validators__WEBPACK_IMPORTED_MODULE_4__["MathValidators"].addition('answer', 'a', 'b')]);
-    }
-    get a() {
-        return this.mathForm.value.a;
-    }
-    get b() {
-        return this.mathForm.value.b;
-    }
-    ngOnInit() {
-        this.mathForm.statusChanges
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(value => value === 'VALID'), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["delay"])(100), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["scan"])(acc => {
-            return {
-                numberSolved: acc.numberSolved + 1,
-                startTime: acc.startTime
-            };
-        }, { numberSolved: 0, startTime: new Date() }))
-            .subscribe(({ numberSolved, startTime }) => {
-            this.secondsPerSolution =
-                (new Date().getTime() - startTime.getTime()) / numberSolved / 1000;
-            this.mathForm.setValue({
-                a: this.randomNumber(),
-                b: this.randomNumber(),
-                answer: ''
-            });
-        });
-    }
-    randomNumber() {
-        return Math.floor(Math.random() * 10);
-    }
-};
-EquationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-equation',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./equation.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/equation/equation.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./equation.component.css */ "./src/app/equation/equation.component.css")).default]
-    })
-], EquationComponent);
-
-
-
-/***/ }),
-
-/***/ "./src/app/math-validators.ts":
-/*!************************************!*\
-  !*** ./src/app/math-validators.ts ***!
-  \************************************/
-/*! exports provided: MathValidators */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MathValidators", function() { return MathValidators; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-
-class MathValidators {
-    static addition(target, sourceOne, sourceTwo) {
-        return (form) => {
-            const sum = form.value[target];
-            const firstNumber = form.value[sourceOne];
-            const secondNumber = form.value[sourceTwo];
-            if (firstNumber + secondNumber === parseInt(sum)) {
-                return null;
-            }
-            return { addition: true };
-        };
-    }
-}
 
 
 /***/ }),
