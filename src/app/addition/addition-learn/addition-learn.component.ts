@@ -12,21 +12,21 @@ export class AdditionLearnComponent implements OnInit {
   secondsPerSolution = 0;
   mathForm = new FormGroup(
     {
-      a: new FormControl(this.randomNumber()),
-      b: new FormControl(this.randomNumber()),
+      firstNumber: new FormControl(this.randomNumber()),
+      secondNumber: new FormControl(this.randomNumber()),
       answer: new FormControl('')
     },
-    [MathAdditionValidator.validate('answer', 'a', 'b')]
+    [MathAdditionValidator.validate('answer', 'firstNumber', 'secondNumber')]
   );
 
   constructor() { }
 
   get firstNumber() {
-    return this.mathForm.value.a;
+    return this.mathForm.value.firstNumber;
   }
 
   get secondNumber() {
-    return this.mathForm.value.b;
+    return this.mathForm.value.secondNumber;
   }
 
   ngOnInit() {
@@ -49,8 +49,8 @@ export class AdditionLearnComponent implements OnInit {
           (new Date().getTime() - startTime.getTime()) / numberSolved / 1000;
 
         this.mathForm.setValue({
-          a: this.randomNumber(),
-          b: this.randomNumber(),
+          firstNumber: this.randomNumber(),
+          secondNumber: this.randomNumber(),
           answer: ''
         });
       });

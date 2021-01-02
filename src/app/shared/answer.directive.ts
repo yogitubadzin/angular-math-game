@@ -10,7 +10,7 @@ export class AnswerDirective {
 
   ngOnInit() {
     this.controlName.control.parent.valueChanges
-      .pipe(map(({ a, b, answer }) => Math.abs((a + b - answer) / (a + b))))
+      .pipe(map(({ firstNumber, secondNumber, answer }) => Math.abs((firstNumber + secondNumber - answer) / (firstNumber + secondNumber))))
       .subscribe(value => {
         console.log(value);
       });
