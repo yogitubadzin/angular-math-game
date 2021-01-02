@@ -202,3 +202,5 @@ tools/
 
 # Visual Studio Code workspace options
 .vscode
+
+dist
