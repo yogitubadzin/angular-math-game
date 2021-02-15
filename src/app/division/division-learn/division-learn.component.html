@@ -1,0 +1,9 @@
+<form [formGroup]="mathForm">
+    <div class="equation">{{ firstNumber }} / {{ secondNumber }} =</div>
+    <input appAnswer formControlName="answer" />
+  </form>
+  
+  <div class="stats">
+    {{ secondsPerSolution | number: '1.1-3' }}
+  </div>
+  

@@ -10,16 +10,18 @@ import { MathAdditionValidator } from '../math-addition-validator';
 })
 export class AdditionLearnComponent implements OnInit {
   secondsPerSolution = 0;
+  randomNumber = 10;
   mathForm = new FormGroup(
     {
-      firstNumber: new FormControl(this.randomNumber()),
-      secondNumber: new FormControl(this.randomNumber()),
+      firstNumber: new FormControl(0),
+      secondNumber: new FormControl(0),
       answer: new FormControl('')
     },
     [MathAdditionValidator.validate('answer', 'firstNumber', 'secondNumber')]
   );
-
-  constructor() { }
+  mainNumber = 10;
+  model = { options: this.randomNumber };
+  numberOfTries = 10;
 
   get firstNumber() {
     return this.mathForm.value.firstNumber;
@@ -45,18 +47,42 @@ export class AdditionLearnComponent implements OnInit {
         )
       )
       .subscribe(({ numberSolved, startTime }) => {
-        this.secondsPerSolution =
-          (new Date().getTime() - startTime.getTime()) / numberSolved / 1000;
-
-        this.mathForm.setValue({
-          firstNumber: this.randomNumber(),
-          secondNumber: this.randomNumber(),
-          answer: ''
-        });
+        this.secondsPerSolution = (new Date().getTime() - startTime.getTime()) / numberSolved / 1000;
+        this.setValues();
+        this.decreaseNumberOfTries();
       });
   }
 
-  randomNumber() {
-    return Math.floor(Math.random() * 10);
+  calculateRandomNumber() {
+    return Math.floor(Math.random() * this.randomNumber);
+  }
+
+  start() {
+    this.numberOfTries = 10;
+    this.randomNumber = this.model.options;
+    this.setValues();
+    this.mathForm.controls.answer.enable();
+  }
+
+  next() {
+    if(this.numberOfTries == 0){
+
+      return;
+    }
+
+    this.setValues();
+    this.decreaseNumberOfTries();
+  }
+
+  setValues() {
+    this.mathForm.setValue({
+      firstNumber: this.calculateRandomNumber(),
+      secondNumber: this.calculateRandomNumber(),
+      answer: ''
+    });
+  }
+
+  decreaseNumberOfTries(){
+    this.numberOfTries = --this.numberOfTries;
   }
 }

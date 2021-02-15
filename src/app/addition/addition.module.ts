@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AdditionRoutingModule } from './addition-routing.module';
 import { AdditionLearnComponent } from './addition-learn/addition-learn.component';
 import { SharedModule } from '../shared/shared.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     AdditionRoutingModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class AdditionModule { }
