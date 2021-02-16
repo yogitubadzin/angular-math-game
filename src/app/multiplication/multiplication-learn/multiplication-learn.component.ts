@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { delay, filter, scan } from 'rxjs/operators';
-import { MathDivisionValidator } from '../math-division-validator';
+import { MathMultiplicationValidator } from '../math-multiplication-validator';
 
 @Component({
-  selector: 'app-division-learn',
-  templateUrl: './division-learn.component.html',
-  styleUrls: ['./division-learn.component.css']
+  selector: 'app-multiplication-learn',
+  templateUrl: './multiplication-learn.component.html',
+  styleUrls: ['./multiplication-learn.component.css']
 })
-export class DivisionLearnComponent implements OnInit {
+export class MultiplicationLearnComponent implements OnInit {
   private subscriptions: Subscription;
   private randomNumber = 10;
 
@@ -19,7 +19,7 @@ export class DivisionLearnComponent implements OnInit {
       secondNumber: new FormControl(0),
       answer: new FormControl('')
     },
-    [MathDivisionValidator.validate('answer', 'firstNumber', 'secondNumber')]
+    [MathMultiplicationValidator.validate('answer', 'firstNumber', 'secondNumber')]
   );
   model = { options: this.randomNumber };
   isGameStarted = false;
