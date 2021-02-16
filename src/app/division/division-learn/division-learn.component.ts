@@ -23,7 +23,7 @@ export class DivisionLearnComponent implements OnInit {
   );
   model = { options: this.randomNumber };
   isGameStarted = false;
-  timeLeft: number = 10;
+  timeLeft: number = 60;
   secondsPerSolution = 0;
   numberSolved = 0;
   interval;
@@ -93,10 +93,15 @@ export class DivisionLearnComponent implements OnInit {
       });
   }
 
-  setValues() {
+  setValues() {    
+    let firstNumber = this.calculateRandomNumber();
+    let secondNumber = this.calculateRandomNumber();
+
+    var result = firstNumber * secondNumber;
+
     this.mathForm.setValue({
-      firstNumber: this.calculateRandomNumber(),
-      secondNumber: this.calculateRandomNumber(),
+      firstNumber: result,
+      secondNumber: secondNumber,
       answer: ''
     });
   }

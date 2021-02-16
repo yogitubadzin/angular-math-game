@@ -23,7 +23,7 @@ export class SubstractionLearnComponent implements OnInit {
   );
   model = { options: this.randomNumber };
   isGameStarted = false;
-  timeLeft: number = 10;
+  timeLeft: number = 60;
   secondsPerSolution = 0;
   numberSolved = 0;
   interval;
@@ -94,9 +94,18 @@ export class SubstractionLearnComponent implements OnInit {
   }
 
   setValues() {
+    let firstNumber = this.calculateRandomNumber();
+    let secondNumber = this.calculateRandomNumber();
+
+    if (firstNumber < secondNumber) {
+      const temp = firstNumber;
+      firstNumber = secondNumber;
+      secondNumber = temp;
+    }
+
     this.mathForm.setValue({
-      firstNumber: this.calculateRandomNumber(),
-      secondNumber: this.calculateRandomNumber(),
+      firstNumber: firstNumber,
+      secondNumber: secondNumber,
       answer: ''
     });
   }

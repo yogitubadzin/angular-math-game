@@ -7,7 +7,7 @@ export class MathMultiplicationValidator {
             const firstNumber = form.value[sourceOne];
             const secondNumber = form.value[sourceTwo];
 
-            if (firstNumber / secondNumber === parseInt(sum)) {
+            if (firstNumber * secondNumber === parseInt(sum)) {
                 return null;
             }
 

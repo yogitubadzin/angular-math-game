@@ -23,7 +23,7 @@ export class AdditionLearnComponent implements OnInit {
   );
   model = { options: this.randomNumber };
   isGameStarted = false;
-  timeLeft: number = 10;
+  timeLeft: number = 60;
   secondsPerSolution = 0;
   numberSolved = 0;
   interval;

@@ -1,65 +1,38 @@
-<h3>Choose level:</h3>
+<h4>Division</h4>
+<h5>Choose level:</h5>
 <div class="form-check">
   <input class="form-check-input" type="radio" [(ngModel)]="model.options" name="exampleRadios" [value]="5"
     id="exampleRadios1" checked>
   <label class="form-check-label" for="exampleRadios1">
-    5 numbers
+    5 numbers (second number and result)
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="radio" [(ngModel)]="model.options" name="exampleRadios" [value]="10"
     id="exampleRadios2" checked>
   <label class="form-check-label" for="exampleRadios2">
-    10 numbers
+    10 numbers (second number and result)
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="radio" [(ngModel)]="model.options" name="exampleRadios" [value]="15"
     id="exampleRadios3" checked>
   <label class="form-check-label" for="exampleRadios3">
-    15 numbers
+    15 numbers (second number and result)
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="radio" [(ngModel)]="model.options" name="exampleRadios" [value]="20"
     id="exampleRadios4" checked>
   <label class="form-check-label" for="exampleRadios4">
-    20 numbers
+    20 numbers (second number and result)
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="radio" [(ngModel)]="model.options" name="exampleRadios" [value]="30"
     id="exampleRadios5" checked>
   <label class="form-check-label" for="exampleRadios5">
-    30 numbers
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" [(ngModel)]="model.options" name="exampleRadios" [value]="50"
-    id="exampleRadios6" checked>
-  <label class="form-check-label" for="exampleRadios6">
-    50 numbers
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" [(ngModel)]="model.options" name="exampleRadios" [value]="100"
-    id="exampleRadios7" checked>
-  <label class="form-check-label" for="exampleRadios7">
-    100 numbers
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" [(ngModel)]="model.options" name="exampleRadios" [value]="200"
-    id="exampleRadios8">
-  <label class="form-check-label" for="exampleRadios8">
-    200 numbers
-  </label>
-</div>
-<div class="form-check disabled">
-  <input class="form-check-input" type="radio" [(ngModel)]="model.options" name="exampleRadios" [value]="500"
-    id="exampleRadios9">
-  <label class="form-check-label" for="exampleRadios9">
-    500 numbers
+    30 numbers (second number and result)
   </label>
 </div>
 <button type="button" name="btnStart" (click)="start()" class="btn btn-primary"
@@ -74,7 +47,7 @@
   <p>{{timeLeft}} Seconds Left....</p>
 </div>
 <form [formGroup]="mathForm">
-  <div class="equation">{{ firstNumber }} + {{ secondNumber }} =</div>
+  <div class="equation">{{ firstNumber }} / {{ secondNumber }} =</div>
   <input appAnswer formControlName="answer" class="input-result" disabled />
 </form>
 <div class="stats">
