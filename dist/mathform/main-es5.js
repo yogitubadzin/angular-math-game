@@ -51,7 +51,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<form [formGroup]=\"mathForm\">\n    <div class=\"equation\">{{ firstNumber }} + {{ secondNumber }} =</div>\n    <input appAnswer formControlName=\"answer\" />\n  </form>\n  \n  <div class=\"stats\">\n    {{ secondsPerSolution | number: '1.1-3' }}\n  </div>\n  ";
+    __webpack_exports__["default"] = "<h4>Addition</h4>\n<h5>Choose level:</h5>\n<div class=\"form-check\">\n  <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"model.options\" name=\"exampleRadios\" [value]=\"5\"\n    id=\"exampleRadios1\" checked>\n  <label class=\"form-check-label\" for=\"exampleRadios1\">\n    5 numbers\n  </label>\n</div>\n<div class=\"form-check\">\n  <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"model.options\" name=\"exampleRadios\" [value]=\"10\"\n    id=\"exampleRadios2\" checked>\n  <label class=\"form-check-label\" for=\"exampleRadios2\">\n    10 numbers\n  </label>\n</div>\n<div class=\"form-check\">\n  <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"model.options\" name=\"exampleRadios\" [value]=\"15\"\n    id=\"exampleRadios3\" checked>\n  <label class=\"form-check-label\" for=\"exampleRadios3\">\n    15 numbers\n  </label>\n</div>\n<div class=\"form-check\">\n  <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"model.options\" name=\"exampleRadios\" [value]=\"20\"\n    id=\"exampleRadios4\" checked>\n  <label class=\"form-check-label\" for=\"exampleRadios4\">\n    20 numbers\n  </label>\n</div>\n<div class=\"form-check\">\n  <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"model.options\" name=\"exampleRadios\" [value]=\"30\"\n    id=\"exampleRadios5\" checked>\n  <label class=\"form-check-label\" for=\"exampleRadios5\">\n    30 numbers\n  </label>\n</div>\n<div class=\"form-check\">\n  <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"model.options\" name=\"exampleRadios\" [value]=\"50\"\n    id=\"exampleRadios6\" checked>\n  <label class=\"form-check-label\" for=\"exampleRadios6\">\n    50 numbers\n  </label>\n</div>\n<div class=\"form-check\">\n  <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"model.options\" name=\"exampleRadios\" [value]=\"100\"\n    id=\"exampleRadios7\" checked>\n  <label class=\"form-check-label\" for=\"exampleRadios7\">\n    100 numbers\n  </label>\n</div>\n<div class=\"form-check\">\n  <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"model.options\" name=\"exampleRadios\" [value]=\"200\"\n    id=\"exampleRadios8\">\n  <label class=\"form-check-label\" for=\"exampleRadios8\">\n    200 numbers\n  </label>\n</div>\n<div class=\"form-check disabled\">\n  <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"model.options\" name=\"exampleRadios\" [value]=\"500\"\n    id=\"exampleRadios9\">\n  <label class=\"form-check-label\" for=\"exampleRadios9\">\n    500 numbers\n  </label>\n</div>\n<button type=\"button\" name=\"btnStart\" (click)=\"start()\" class=\"btn btn-primary\"\n  [disabled]=\"isGameStarted\">Start</button>\n\n<div>Number of tries: {{numberSolved}}</div>\n<div *ngIf=\"numberSolved > 0\">\n  Your result is: {{ secondsPerSolution | number: '1.1-2' }}\n</div>\n\n<div class=\"stats\">\n  <p>{{timeLeft}} Seconds Left....</p>\n</div>\n<form [formGroup]=\"mathForm\">\n  <div class=\"equation\">{{ firstNumber }} + {{ secondNumber }} =</div>\n  <input appAnswer formControlName=\"answer\" class=\"input-result\" disabled />\n</form>\n<div class=\"stats\">\n  Average time: {{ secondsPerSolution | number: '1.1-2' }}\n</div>";
     /***/
   },
 
@@ -669,7 +669,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "form {\r\n    margin-top: 20%;\r\n    display: flex;\r\n    justify-content: center;\r\n    font-size: 96px;\r\n  }\r\n  \r\n  input {\r\n    font-size: 96px;\r\n    border: none;\r\n    border-bottom: 1px solid black;\r\n    width: 20%;\r\n    text-align: center;\r\n  }\r\n  \r\n  input:focus {\r\n    outline: none;\r\n  }\r\n  \r\n  .stats {\r\n    position: absolute;\r\n    bottom: 100px;\r\n    left: 0;\r\n    right: 0;\r\n    text-align: center;\r\n    font-size: 24px;\r\n  }\r\n  \r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRkaXRpb24vYWRkaXRpb24tbGVhcm4vYWRkaXRpb24tbGVhcm4uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGVBQWU7SUFDZixhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLGVBQWU7RUFDakI7O0VBRUE7SUFDRSxlQUFlO0lBQ2YsWUFBWTtJQUNaLDhCQUE4QjtJQUM5QixVQUFVO0lBQ1Ysa0JBQWtCO0VBQ3BCOztFQUVBO0lBQ0UsYUFBYTtFQUNmOztFQUVBO0lBQ0Usa0JBQWtCO0lBQ2xCLGFBQWE7SUFDYixPQUFPO0lBQ1AsUUFBUTtJQUNSLGtCQUFrQjtJQUNsQixlQUFlO0VBQ2pCIiwiZmlsZSI6InNyYy9hcHAvYWRkaXRpb24vYWRkaXRpb24tbGVhcm4vYWRkaXRpb24tbGVhcm4uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImZvcm0ge1xyXG4gICAgbWFyZ2luLXRvcDogMjAlO1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgZm9udC1zaXplOiA5NnB4O1xyXG4gIH1cclxuICBcclxuICBpbnB1dCB7XHJcbiAgICBmb250LXNpemU6IDk2cHg7XHJcbiAgICBib3JkZXI6IG5vbmU7XHJcbiAgICBib3JkZXItYm90dG9tOiAxcHggc29saWQgYmxhY2s7XHJcbiAgICB3aWR0aDogMjAlO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIH1cclxuICBcclxuICBpbnB1dDpmb2N1cyB7XHJcbiAgICBvdXRsaW5lOiBub25lO1xyXG4gIH1cclxuICBcclxuICAuc3RhdHMge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgYm90dG9tOiAxMDBweDtcclxuICAgIGxlZnQ6IDA7XHJcbiAgICByaWdodDogMDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGZvbnQtc2l6ZTogMjRweDtcclxuICB9XHJcbiAgIl19 */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkZGl0aW9uL2FkZGl0aW9uLWxlYXJuL2FkZGl0aW9uLWxlYXJuLmNvbXBvbmVudC5jc3MifQ== */";
     /***/
   },
 
@@ -713,13 +713,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! rxjs/operators */
     "./node_modules/rxjs/_esm2015/operators/index.js");
     /* harmony import */
 
 
-    var _math_addition_validator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _math_addition_validator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! ../math-addition-validator */
     "./src/app/addition/math-addition-validator.ts");
 
@@ -729,45 +735,118 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       function AdditionLearnComponent() {
         _classCallCheck(this, AdditionLearnComponent);
 
-        this.secondsPerSolution = 0;
+        this.randomNumber = 10;
         this.mathForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
-          firstNumber: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.randomNumber()),
-          secondNumber: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.randomNumber()),
+          firstNumber: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](0),
+          secondNumber: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](0),
           answer: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('')
-        }, [_math_addition_validator__WEBPACK_IMPORTED_MODULE_4__["MathAdditionValidator"].validate('answer', 'firstNumber', 'secondNumber')]);
+        }, [_math_addition_validator__WEBPACK_IMPORTED_MODULE_5__["MathAdditionValidator"].validate('answer', 'firstNumber', 'secondNumber')]);
+        this.model = {
+          options: this.randomNumber
+        };
+        this.isGameStarted = false;
+        this.timeLeft = 60;
+        this.secondsPerSolution = 0;
+        this.numberSolved = 0;
+        this.subscriptions = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subscription"]();
       }
 
       _createClass(AdditionLearnComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {
+        value: function ngOnInit() {}
+      }, {
+        key: "calculateRandomNumber",
+        value: function calculateRandomNumber() {
+          return Math.floor(Math.random() * this.randomNumber);
+        }
+      }, {
+        key: "start",
+        value: function start() {
+          this.subscriptions.add(this.trackChanges());
+          this.timeLeft = 60;
+          this.numberSolved = 0;
+          this.secondsPerSolution = 0;
+          this.randomNumber = this.model.options;
+          this.setValues();
+          this.mathForm.controls.answer.enable();
+          this.isGameStarted = true;
+          this.startTimer();
+        }
+      }, {
+        key: "stop",
+        value: function stop() {
+          this.mathForm.setValue({
+            firstNumber: 0,
+            secondNumber: 0,
+            answer: ''
+          });
+          this.isGameStarted = false;
+          this.mathForm.controls.answer.disable();
+        }
+      }, {
+        key: "trackChanges",
+        value: function trackChanges() {
           var _this = this;
 
-          this.mathForm.statusChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(function (value) {
+          this.mathForm.statusChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["filter"])(function (value) {
             return value === 'VALID';
-          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["delay"])(100), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["scan"])(function (acc) {
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["delay"])(100), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["scan"])(function (acc) {
             return {
               numberSolved: acc.numberSolved + 1,
               startTime: acc.startTime
             };
           }, {
             numberSolved: 0,
-            startTime: new Date()
+            startTime: new Date().getTime()
           })).subscribe(function (_ref) {
             var numberSolved = _ref.numberSolved,
                 startTime = _ref.startTime;
-            _this.secondsPerSolution = (new Date().getTime() - startTime.getTime()) / numberSolved / 1000;
+            _this.secondsPerSolution = (new Date().getTime() - startTime) / numberSolved / 1000;
+            _this.numberSolved = numberSolved;
 
-            _this.mathForm.setValue({
-              firstNumber: _this.randomNumber(),
-              secondNumber: _this.randomNumber(),
-              answer: ''
-            });
+            _this.setValues();
+
+            _this.increaseNumberOfTries();
           });
         }
       }, {
-        key: "randomNumber",
-        value: function randomNumber() {
-          return Math.floor(Math.random() * 10);
+        key: "setValues",
+        value: function setValues() {
+          this.mathForm.setValue({
+            firstNumber: this.calculateRandomNumber(),
+            secondNumber: this.calculateRandomNumber(),
+            answer: ''
+          });
+        }
+      }, {
+        key: "increaseNumberOfTries",
+        value: function increaseNumberOfTries() {
+          this.numberSolved = this.numberSolved++;
+        }
+      }, {
+        key: "startTimer",
+        value: function startTimer() {
+          var _this2 = this;
+
+          this.interval = setInterval(function () {
+            if (_this2.timeLeft > 0) {
+              _this2.timeLeft--;
+            } else {
+              _this2.pauseTimer();
+
+              _this2.stop();
+            }
+          }, 1000);
+        }
+      }, {
+        key: "pauseTimer",
+        value: function pauseTimer() {
+          clearInterval(this.interval);
+        }
+      }, {
+        key: "ngDestroy",
+        value: function ngDestroy() {
+          this.subscriptions.unsubscribe();
         }
       }, {
         key: "firstNumber",
@@ -924,7 +1003,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     AdditionModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       declarations: [_addition_learn_addition_learn_component__WEBPACK_IMPORTED_MODULE_4__["AdditionLearnComponent"]],
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _addition_routing_module__WEBPACK_IMPORTED_MODULE_3__["AdditionRoutingModule"], _shared_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"]]
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _addition_routing_module__WEBPACK_IMPORTED_MODULE_3__["AdditionRoutingModule"], _shared_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"]]
     })], AdditionModule);
     /***/
   },
