@@ -49,7 +49,7 @@ export class AdditionLearnComponent implements OnInit {
 
   start() {
     this.subscriptions.add(this.trackChanges());
-    this.timeLeft = 10;
+    this.timeLeft = 60;
     this.numberSolved = 0;
     this.secondsPerSolution = 0;
     this.randomNumber = this.model.options;
