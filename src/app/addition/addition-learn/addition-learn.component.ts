@@ -10,6 +10,7 @@ import { MathAdditionValidator } from '../math-addition-validator';
 })
 export class AdditionLearnComponent implements OnInit {
   secondsPerSolution = 0;
+  numberSolved = 0;
   randomNumber = 10;
   mathForm = new FormGroup(
     {
@@ -21,7 +22,10 @@ export class AdditionLearnComponent implements OnInit {
   );
   mainNumber = 10;
   model = { options: this.randomNumber };
-  numberOfTries = 10;
+  numberOfTries = 0;
+  isGameStarted = false;
+  timeLeft: number = 10;
+  interval;
 
   get firstNumber() {
     return this.mathForm.value.firstNumber;
@@ -43,13 +47,14 @@ export class AdditionLearnComponent implements OnInit {
               startTime: acc.startTime
             };
           },
-          { numberSolved: 0, startTime: new Date() }
+          { numberSolved: 0, startTime: new Date().getTime() }
         )
       )
       .subscribe(({ numberSolved, startTime }) => {
-        this.secondsPerSolution = (new Date().getTime() - startTime.getTime()) / numberSolved / 1000;
+        this.secondsPerSolution = (new Date().getTime() - startTime) / numberSolved / 1000;
+        this.numberSolved = numberSolved;
         this.setValues();
-        this.decreaseNumberOfTries();
+        this.increaseNumberOfTries();
       });
   }
 
@@ -58,20 +63,25 @@ export class AdditionLearnComponent implements OnInit {
   }
 
   start() {
-    this.numberOfTries = 10;
+    this.timeLeft = 10;
+    this.numberOfTries = 0;
+    this.secondsPerSolution = 0;
     this.randomNumber = this.model.options;
     this.setValues();
     this.mathForm.controls.answer.enable();
+    this.isGameStarted = true;
+    this.startTimer();
   }
 
-  next() {
-    if(this.numberOfTries == 0){
-
-      return;
-    }
-
-    this.setValues();
-    this.decreaseNumberOfTries();
+  stop() {
+    this.mathForm.setValue({
+      firstNumber: 0,
+      secondNumber: 0,
+      answer: ''
+    });
+    
+    this.isGameStarted = false;
+    this.mathForm.controls.answer.disable();
   }
 
   setValues() {
@@ -82,7 +92,22 @@ export class AdditionLearnComponent implements OnInit {
     });
   }
 
-  decreaseNumberOfTries(){
-    this.numberOfTries = --this.numberOfTries;
+  increaseNumberOfTries() {
+    this.numberOfTries = ++this.numberOfTries;
+  } 
+  
+  startTimer() {
+    this.interval = setInterval(() => {
+      if (this.timeLeft > 0) {
+        this.timeLeft--;
+      } else {
+        this.pauseTimer();
+        this.stop();
+      }
+    }, 1000)
+  }
+
+  pauseTimer() {
+    clearInterval(this.interval);
   }
 }
