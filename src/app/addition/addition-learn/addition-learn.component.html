@@ -1,37 +1,72 @@
 <h3>Choose level:</h3>
 <div class="form-check">
-  <input class="form-check-input" type="radio" [(ngModel)]="model.options" name="exampleRadios" [value]="10"
+  <input class="form-check-input" type="radio" [(ngModel)]="model.options" name="exampleRadios" [value]="5"
     id="exampleRadios1" checked>
   <label class="form-check-label" for="exampleRadios1">
+    5 numbers
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" [(ngModel)]="model.options" name="exampleRadios" [value]="10"
+    id="exampleRadios2" checked>
+  <label class="form-check-label" for="exampleRadios2">
     10 numbers
   </label>
 </div>
 <div class="form-check">
+  <input class="form-check-input" type="radio" [(ngModel)]="model.options" name="exampleRadios" [value]="15"
+    id="exampleRadios3" checked>
+  <label class="form-check-label" for="exampleRadios3">
+    15 numbers
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" [(ngModel)]="model.options" name="exampleRadios" [value]="20"
+    id="exampleRadios4" checked>
+  <label class="form-check-label" for="exampleRadios4">
+    20 numbers
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" [(ngModel)]="model.options" name="exampleRadios" [value]="30"
+    id="exampleRadios5" checked>
+  <label class="form-check-label" for="exampleRadios5">
+    30 numbers
+  </label>
+</div>
+<div class="form-check">
   <input class="form-check-input" type="radio" [(ngModel)]="model.options" name="exampleRadios" [value]="50"
-    id="exampleRadios2">
-  <label class="form-check-label" for="exampleRadios2">
+    id="exampleRadios6" checked>
+  <label class="form-check-label" for="exampleRadios6">
     50 numbers
   </label>
 </div>
-<div class="form-check disabled">
+<div class="form-check">
   <input class="form-check-input" type="radio" [(ngModel)]="model.options" name="exampleRadios" [value]="100"
-    id="exampleRadios3">
-  <label class="form-check-label" for="exampleRadios3">
+    id="exampleRadios7" checked>
+  <label class="form-check-label" for="exampleRadios7">
     100 numbers
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" [(ngModel)]="model.options" name="exampleRadios" [value]="200"
+    id="exampleRadios8">
+  <label class="form-check-label" for="exampleRadios8">
+    200 numbers
   </label>
 </div>
 <div class="form-check disabled">
   <input class="form-check-input" type="radio" [(ngModel)]="model.options" name="exampleRadios" [value]="500"
-    id="exampleRadios4">
-  <label class="form-check-label" for="exampleRadios4">
+    id="exampleRadios9">
+  <label class="form-check-label" for="exampleRadios9">
     500 numbers
   </label>
 </div>
 <button type="button" name="btnStart" (click)="start()" class="btn btn-primary"
   [disabled]="isGameStarted">Start</button>
 
-<div>Number of tries: {{numberOfTries}}</div>
-<div *ngIf="numberOfTries > 0">
+<div>Number of tries: {{numberSolved}}</div>
+<div *ngIf="numberSolved > 0">
   Your result is: {{ secondsPerSolution | number: '1.1-2' }}
 </div>
 
@@ -40,7 +75,7 @@
 </div>
 <form [formGroup]="mathForm">
   <div class="equation">{{ firstNumber }} + {{ secondNumber }} =</div>
-  <input appAnswer formControlName="answer" class="input-result" disabled/>
+  <input appAnswer formControlName="answer" class="input-result" disabled />
 </form>
 <div class="stats">
   Average time: {{ secondsPerSolution | number: '1.1-2' }}

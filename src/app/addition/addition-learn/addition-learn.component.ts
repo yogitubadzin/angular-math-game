@@ -11,9 +11,8 @@ import { MathAdditionValidator } from '../math-addition-validator';
 })
 export class AdditionLearnComponent implements OnInit {
   private subscriptions: Subscription;
-  secondsPerSolution = 0;
-  numberSolved = 0;
-  randomNumber = 10;
+  private randomNumber = 10;
+
   mathForm = new FormGroup(
     {
       firstNumber: new FormControl(0),
@@ -22,11 +21,11 @@ export class AdditionLearnComponent implements OnInit {
     },
     [MathAdditionValidator.validate('answer', 'firstNumber', 'secondNumber')]
   );
-  mainNumber = 10;
   model = { options: this.randomNumber };
-  numberOfTries = 0;
   isGameStarted = false;
   timeLeft: number = 10;
+  secondsPerSolution = 0;
+  numberSolved = 0;
   interval;
 
   constructor() {
@@ -49,29 +48,9 @@ export class AdditionLearnComponent implements OnInit {
   }
 
   start() {
-    this.subscriptions.add(this.mathForm.statusChanges
-      .pipe(
-        filter(value => value === 'VALID'),
-        delay(100),
-        scan(
-          acc => {
-            return {
-              numberSolved: acc.numberSolved + 1,
-              startTime: acc.startTime
-            };
-          },
-          { numberSolved: 0, startTime: new Date().getTime() }
-        )
-      )
-      .subscribe(({ numberSolved, startTime }) => {
-        this.secondsPerSolution = (new Date().getTime() - startTime) / numberSolved / 1000;
-        this.numberSolved = numberSolved;
-        this.setValues();
-        this.increaseNumberOfTries();
-      }));
-
+    this.subscriptions.add(this.trackChanges());
     this.timeLeft = 10;
-    this.numberOfTries = 0;
+    this.numberSolved = 0;
     this.secondsPerSolution = 0;
     this.randomNumber = this.model.options;
     this.setValues();
@@ -91,6 +70,29 @@ export class AdditionLearnComponent implements OnInit {
     this.mathForm.controls.answer.disable();
   }
 
+  trackChanges() {
+    this.mathForm.statusChanges
+      .pipe(
+        filter(value => value === 'VALID'),
+        delay(100),
+        scan(
+          acc => {
+            return {
+              numberSolved: acc.numberSolved + 1,
+              startTime: acc.startTime
+            };
+          },
+          { numberSolved: 0, startTime: new Date().getTime() }
+        )
+      )
+      .subscribe(({ numberSolved, startTime }) => {
+        this.secondsPerSolution = (new Date().getTime() - startTime) / numberSolved / 1000;
+        this.numberSolved = numberSolved;
+        this.setValues();
+        this.increaseNumberOfTries();
+      });
+  }
+
   setValues() {
     this.mathForm.setValue({
       firstNumber: this.calculateRandomNumber(),
@@ -100,7 +102,7 @@ export class AdditionLearnComponent implements OnInit {
   }
 
   increaseNumberOfTries() {
-    this.numberOfTries = ++this.numberOfTries;
+    this.numberSolved = this.numberSolved++;
   }
 
   startTimer() {
