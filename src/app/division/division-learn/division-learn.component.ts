@@ -12,6 +12,7 @@ import { MathDivisionValidator } from '../math-division-validator';
 export class DivisionLearnComponent implements OnInit {
   private subscriptions: Subscription;
   private randomNumber = 10;
+  private timeLeft: number;
 
   mathForm = new FormGroup(
     {
@@ -23,7 +24,7 @@ export class DivisionLearnComponent implements OnInit {
   );
   model = { options: this.randomNumber };
   isGameStarted = false;
-  timeLeft: number = 60;
+  time = 60;
   secondsPerSolution = 0;
   numberSolved = 0;
   interval;
@@ -48,8 +49,8 @@ export class DivisionLearnComponent implements OnInit {
   }
 
   start() {
+    this.timeLeft = this.time;
     this.subscriptions.add(this.trackChanges());
-    this.timeLeft = 60;
     this.numberSolved = 0;
     this.secondsPerSolution = 0;
     this.randomNumber = this.model.options;
